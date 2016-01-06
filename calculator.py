@@ -14,11 +14,16 @@ while True:
     #intify raw input
     user_input = raw_input("")
     user_input = user_input.split(" ")
-    if len(user_input) > 1:
-        user_input[1] = int(user_input[1])
-        if len(user_input)==3:
-            user_input[2] = int(user_input[2])
-
+    #+ str sfsfd
+    try:
+        if len(user_input) > 1:
+            user_input[1] = int(user_input[1])
+            if len(user_input)==3:
+                user_input[2] = int(user_input[2])
+       
+    except ValueError:
+        print "Oops! If you are male, may you become eligible to apply to Hackbright!"  
+        break
     if user_input[0] =="+":
         print add(user_input[1],user_input[2])
     elif user_input[0] =="-":
